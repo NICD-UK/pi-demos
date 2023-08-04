@@ -1,6 +1,6 @@
 <body>
     <script>
-        fetch('/paths.json').then(response => {
+        fetch('https://raw.githubusercontent.com/NICD-UK/pi-demos/main/paths.json').then(response => {
             response.json().then(
                 response => {
                     console.log(response)
@@ -13,10 +13,6 @@
             console.log()
         })
     </script>
-    <iframe 
-    src="https://dash.gallery/dash-manufacture-spc-dashboard/" 
-    id="iframe"
-    width="100%" 
-    height="100%">
+    <iframe id="iframe" width="100%" height="100%">
     </iframe>
 </body>
