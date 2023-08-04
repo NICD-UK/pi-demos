@@ -1,12 +1,16 @@
 <body>
     <script>
-        fetch('https://raw.githubusercontent.com/NICD-UK/pi-demos/main/paths.json').then(response => {
-            response.json().then(
-                response => {
-                    path = response['pi-1']
-                    document.getElementById('iframe').src = path;
-
-                }
+        fetch('name').then(response => {
+            response.text().then(name => {
+                fetch('urls.json').then(response => {
+                    response.json().then(
+                        paths => {
+                            path = paths[name]
+                            document.getElementById('iframe').src = path;
+                        }
+                    )
+                })
+            }
             )
         })
     </script>
