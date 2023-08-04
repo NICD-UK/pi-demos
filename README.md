@@ -21,3 +21,11 @@ Run the image:
 ```shell
 docker run -v $(pwd)/name:/src/name -p 8000:8000 fmcclean/pi-demo 
 ```
+
+Run watchtower:
+
+```shell
+docker run -d \
+--name watchtower \
+-v /var/run/docker.sock:/var/run/docker.sock \
+containrrr/watchtower --interval 60
