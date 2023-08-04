@@ -7,7 +7,7 @@ The name of the raspberry pi is used to choose the URL from `urls.py`.
 Build and tag the image:
 
 ```shell
-docker build -t pi-demo -t fmcclean/pi-demo .
+docker build -t fmcclean/pi-demo .
 ```
 
 Push the image:
@@ -19,5 +19,5 @@ docker push fmcclean/pi-demo
 Run the image:
 
 ```shell
-docker run -v $(pwd)/name:/src/name -p 8000:8000 pi-demo 
+docker run -v $(pwd)/name:/src/name -p 8000:8000 fmcclean/pi-demo 
 ```
