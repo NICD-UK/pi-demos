@@ -1,8 +1,8 @@
 <body>
     <script>
-        fetch('name').then(response => {
+        fetch('name', {cache: "no-store"}).then(response => {
             response.text().then(name => {
-                fetch('urls.json').then(response => {
+                fetch('urls.json', {cache: "no-store"}).then(response => {
                     response.json().then(
                         paths => {
                             path = paths[name]
