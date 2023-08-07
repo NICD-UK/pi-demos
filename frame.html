@@ -4,9 +4,6 @@
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const name = urlParams.get('name');
-        if (name === null) {
-            window.location.href = "pages.html";
-        }
         function updateURL() {
             fetch('urls.json', { cache: "no-store" }).then(response => {
                 response.json().then(
