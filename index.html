@@ -7,13 +7,21 @@
         if (name === null) {
             window.location.href = "/pages.html";
         }
-        fetch('urls.json', { cache: "no-store" }).then(response => {
-            response.json().then(
-                paths => {
-                    path = paths[name]
-                    document.getElementById('iframe').src = path;
-                }
-            )
-        })
+        function updateURL() {
+            fetch('urls.json', { cache: "no-store" }).then(response => {
+                response.json().then(
+                    paths => {
+                        path = paths[name]
+                        if (document.getElementById('iframe').src != path) {
+                            document.getElementById('iframe').src = path
+                        };
+                    }
+                )
+            })
+            setTimeout(updateURL, 10000)
+        }
+
+        updateURL()
+
     </script>
 </body>
