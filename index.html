@@ -1,19 +1,16 @@
 <body>
+    <iframe id="iframe" width="100%" height="100%">
+    </iframe>
     <script>
-        fetch('name', {cache: "no-store"}).then(response => {
-            response.text().then(name => {
-                fetch('urls.json', {cache: "no-store"}).then(response => {
-                    response.json().then(
-                        paths => {
-                            path = paths[name]
-                            document.getElementById('iframe').src = path;
-                        }
-                    )
-                })
-            }
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        fetch('urls.json', { cache: "no-store" }).then(response => {
+            response.json().then(
+                paths => {
+                    path = paths[name]
+                    document.getElementById('iframe').src = path;
+                }
             )
         })
     </script>
-    <iframe id="iframe" width="100%" height="100%">
-    </iframe>
 </body>
