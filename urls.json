@@ -1,4 +1,5 @@
 {
     "pi-1": "https://dash.gallery/dash-wind-streaming/",
-    "pi-2": "https://dash.gallery/dash-manufacture-spc-dashboard/"
+    "pi-2": "https://dash.gallery/dash-manufacture-spc-dashboard/",
+    "pi-3": "https://embed.windy.com/embed2.html?lat=53.331&lon=-2.461&detailLat=47.267&detailLon=11.400&width=650&height=450&zoom=5&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1"
 }
