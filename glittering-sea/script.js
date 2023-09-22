@@ -63,14 +63,15 @@
         x: Math.random(),
         y: -1
       };
-      this.l = rand(0, 20);
+      // Lifetime of the particle
+      this.l = rand(0, 500);
       this.sl = this.l;
     };
 
     Shape.prototype.updateParams = function() {
       this.l -= 1;
       if (this.l < 0) {
-        this.init(X * (Math.random() + Math.random()) / 2, rand(0, Y));
+        this.init(rand(0, X), Y * (Math.random() + Math.random()) / 2);
       }
     };
 
@@ -130,10 +131,6 @@
       onResize();
     });
 
-    window.addEventListener('mousemove', function(e) {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-    }, false);
 
   });
 })();
