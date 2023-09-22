@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+}
+
+.heading {
+  /* padding-left: 50%; */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background: transparent;
+  color: #A361FF;
+  font-size: 40px;
+  font-family: Derailed;
+}
+
+canvas {
+  filter: blur(4px);
+  background: #00222B;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -100;
+}
+
+canvas#canvas {
+  display: block;
+}
+
+
+@font-face {
+  font-family: 'Derailed';
+  src: url("fonts/derailed-regular-webfont.woff2")
+}
+
+@font-face {
+  font-family: 'Derailed';
+  font-weight: bold;
+  src: url("fonts/derailed-bold-webfont.woff2")
+}
+
+@font-face {
+  font-family: 'Derailed';
+  font-weight: 800;
+  src: url("fonts/derailed-extrabold-webfont.woff2")
+}
