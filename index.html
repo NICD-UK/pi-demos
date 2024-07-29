@@ -4,7 +4,7 @@
     </ul>
 
     <script>
-        fetch('urls.json', { cache: "no-store" }).then(response => {
+        fetch('https://decisiontheatrestorage.blob.core.windows.net/pi-demos/urls.json', { cache: "no-store" , }).then(response => {
             response.json().then(
                 paths => {
                     const ul = document.getElementById('ul')
