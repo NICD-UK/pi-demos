@@ -1,0 +1,9 @@
+<body style="text-align: center;">
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const path = urlParams.get('path');
+        var img = document.createElement("img");
+        img.src = path;
+        document.body.appendChild(img)
+    </script>
+</body>
