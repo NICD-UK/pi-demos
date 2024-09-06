@@ -4,7 +4,15 @@
         const path = urlParams.get('path');
         var img = document.createElement("img");
         img.src = path;
-        img.style.height = "100%"
+        img.style.height = "90%"
         document.body.appendChild(img)
+        console.log(urlParams)
+        const promptText = urlParams.get('prompt')
+        if (promptText !== undefined) {
+            const prompt = document.createElement("p");
+            prompt.innerHTML = urlParams.get('prompt');
+            document.body.appendChild(prompt)
+        }
+
     </script>
 </body>
