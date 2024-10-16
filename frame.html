@@ -9,7 +9,7 @@
                 response.json().then(
                     paths => {
                         path = paths[name]
-                        if (document.getElementById('iframe').src != path) {
+                        if (decodeURI(document.getElementById('iframe').src) != decodeURI(path)) {
                             document.getElementById('iframe').src = path
                         };
                     }
