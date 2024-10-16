@@ -1,17 +1,17 @@
 <body style="text-align: center;">
+    
+    <img id="img" style="height: 90%;"/>
+    <p id="prompt" style="font-size: 4vh; margin: 0;"></p>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const path = urlParams.get('path');
-        var img = document.createElement("img");
+        var img = document.getElementById("img");
         img.src = path;
-        img.style.height = "90%"
-        document.body.appendChild(img)
-        console.log(urlParams)
+        // console.log(urlParams)
         const promptText = urlParams.get('prompt')
         if (promptText !== undefined) {
-            const prompt = document.createElement("p");
+            const prompt = document.getElementById("prompt");
             prompt.innerHTML = urlParams.get('prompt');
-            document.body.appendChild(prompt)
         }
 
     </script>
